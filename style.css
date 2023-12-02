@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+.preloader {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: #FFF;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.left {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: #faedcd;
+    transition: all .5s ease;
+}
+
+
+.slider {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 50vw);
+    position: relative;
+    transition: all .8s ease-out;
+    right: 0;
+}
+
+.right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 4.5rem;
+    padding-left: 6.25rem;
+}
+
+.right .content-wrapper {
+    height: 100px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right .content{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+    bottom: -15px;
+    transition: all .8s ease;
+}
+
+.right .content h1 {
+    font-size: 60px;
+    width: 100%;
+}
+
+.right p {
+    position: relative;
+    bottom: 3.25rem;
+    font-size: 30px;
+}
+
+.right :is(.next, .prev) {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    transform: scale(1);
+}
+
+.right :is(.next, .prev):active {
+    transform: scale(0.8);
+}
+
+.price {
+    position: relative;
+}
+
+.price__item {
+    position: absolute;
+    font-size: 60px;
+    top: -40px;
+    transition: all .5s ease;
+    opacity: 1;
+}
+
+.price__item.hidden {
+    opacity: 0;
+}
+
+.buy-btn {
+    border: none;
+    background: #001219;
+    padding: 20px 60px;
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .3s ease;
+    transform: scale(1);
+}
+
+.buy-btn:active {
+    transform: scale(0.8);
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+    transition: all .8s ease-out;
+}
+
+img.small {
+    width: 10% !important;
+}
+
+img.big {
+    width: 50% !important;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.disabled:active {
+    transform: scale(1) !important;
+}
